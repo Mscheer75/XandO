@@ -65,7 +65,7 @@ int main()
     {
         for (int j=0; j <3; j++)
         {
-            cout << board[j][i] << " "; 
+            cout << board[i][j] << " "; 
             if ( j == 2)
             {
                 cout << endl;
