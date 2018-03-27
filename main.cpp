@@ -44,15 +44,18 @@ int main()
     //Outline
     //1. When neither of the (above) if nor else if statements are true, then...
     //1-A.  Assign the board location of row and column to the value of turn
-    board[row][column] = turn;
-    if (turn == O)
-    {
+   
+   if ( (column >= 0 || row >= 0) && (column < 3 || row < 3))
+   {
+     board[row][column] = turn;
+     if (turn == O)
+     {
         turn = 'X';
-    } else 
-    {
+     } else 
+     {
         turn = 'O';
-    }
-    
+      }
+   }
  
     
     //1-B.  When turn has the value 'X', then...
