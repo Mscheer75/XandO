@@ -44,12 +44,35 @@ int main()
     //Outline
     //1. When neither of the (above) if nor else if statements are true, then...
     //1-A.  Assign the board location of row and column to the value of turn
+    board[row][column] = turn;
+    if (turn == X)
+    {
+        turn = 'O';
+    } else 
+    {
+        turn = 'X';
+    }
+    
+ 
+    
     //1-B.  When turn has the value 'X', then...
     //1-B-1.  turn should be assigned the value 'O'
     //1-C.  In any other case, then...
     //1-C-1.  turn should be assigned the value 'X'
     
     cout<<"\nBOARD\n-----\n";
+    for (int i =0; i <3; i++)
+    {
+        for (int j=0; j <3; j++)
+        {
+            cout << board[j][i] << " "; 
+            if ( j == 2)
+            {
+                cout << endl;
+                
+            }     
+        }
+    }
     //TODO: Print the current board
     //Outline
     //1. Traverse through each row, calling the current row r
